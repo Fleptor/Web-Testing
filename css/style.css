@@ -89,12 +89,22 @@ h1 {
 }
 
 p { 
-	background-color: #1C588C8C;
+	background-color: #1c588c8c;
 	color: #fff;
-	font-family: "Changa";
+	font-family: "changa";
 	font-size: 24px;
 	border: 2px solid #fff;
 	max-width: 740px;
+	padding: 20px;
+}
+
+ul {
+	list-style: none;
+	background-color: #1c588c8c;
+	color: #fff;
+	font-family: "changa";
+	font-size: 28px;
+	border: 2px solid #fff;
 	padding: 20px;
 }
 
@@ -120,11 +130,10 @@ input { height: 30px; font-size: 20px; border: 2px solid #000;}
 	display: flex;
 	justify-content: space-around;
 	margin-top: 25px;
-	text-decoration: none;
 }
 
-.form-options a { color: #fff;}
-.form-options a:hover { color: #aaa;}
+a { color: #fff; text-decoration: none; }
+a:hover { color: #aaa; text-decoration: underline;}
 
 #signup-form, #signin-form {
     display: flex;
