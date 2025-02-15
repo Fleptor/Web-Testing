@@ -128,6 +128,7 @@ input { height: 30px; font-size: 20px; border: 2px solid #000;}
 
 .form-options { 
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 	margin-top: 25px;
 }
@@ -144,7 +145,7 @@ a:hover { color: #aaa; text-decoration: underline;}
     width: 450px;
     font-family: monospace;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
     padding: 20px;
     margin-block: 50px;
     border-radius: 10px;

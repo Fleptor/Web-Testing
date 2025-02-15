@@ -5,6 +5,7 @@ import {
     createUserWithEmailAndPassword, 
     signInWithEmailAndPassword, 
     onAuthStateChanged, 
+    sendPasswordResetEmail,
     signOut 
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
@@ -27,6 +28,7 @@ export {
     createUserWithEmailAndPassword, 
     signInWithEmailAndPassword, 
     onAuthStateChanged, 
+    sendPasswordResetEmail,
     signOut, 
     db 
 };
