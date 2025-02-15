@@ -9,7 +9,7 @@ document.getElementById('signup-form').addEventListener('submit', (e) => {
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             alert('User signed up successfully!');
-            window.location.href = 'fb-signin.html'; // Redirect to sign-in page
+            window.location.href = 'signin.html'; // Redirect to sign-in page
         })
         .catch((error) => {
             alert(error.message);
