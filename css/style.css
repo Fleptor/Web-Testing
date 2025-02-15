@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(/assets/fonts/PressStart2P.woff);
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(/assets/fonts/Orbitron-Regular.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(/assets/fonts/Orbitron-Bold.woff);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(/assets/fonts/Orbitron-Medium.woff);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(/assets/fonts/Orbitron-SemiBold.woff);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "monogram";
+    src: url(/assets/fonts/monogram.woff);
+}
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Regular.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Bold.woff);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Light.woff);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+   font-family: "kawkabmono";
+   src: url(/assets/fonts/kawkabmono.ttf);
+}
+
+html {
+	height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/assets/backgrounds/pixel-space.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+}
+
+form {
+	font-family: "Orbitron";
+}
