@@ -7,10 +7,46 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
+    <style>
+        /* Hide the content by default */
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-<body>
+<body class="hidden"> <!-- Add the 'hidden' class to the body -->
     <h1>Dashboard</h1>
     <p>Welcome to your dashboard!</p>
+    <button id="logout-button">Logout</button>
     <footer>This page is dedicated for Firebase Authentication testing. - Fleptor</footer>
+
+    <!-- Add Firebase and Firestore scripts -->
+    <script type="module">
+        import { auth, onAuthStateChanged, signOut } from './js/firebase-config.js';
+
+        // Check if the user is authenticated
+        onAuthStateChanged(auth, (user) => {
+            if (!user) {
+                // If the user is not authenticated, redirect to the sign-in page
+                window.location.href = 'signin.html';
+            } else {
+                // If the user is authenticated, show the content
+                document.body.classList.remove('hidden'); // Remove the 'hidden' class
+                console.log('User is authenticated:', user.email);
+            }
+        });
+
+        // Logout functionality
+        document.getElementById('logout-button').addEventListener('click', () => {
+            signOut(auth)
+                .then(() => {
+                    alert('You have been logged out.');
+                    window.location.href = 'signin.html'; // Redirect to sign-in page after logout
+                })
+                .catch((error) => {
+                    alert('Error logging out:', error.message);
+                });
+        });
+    </script>
 </body>
 </html>
