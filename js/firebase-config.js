@@ -6,7 +6,6 @@ const firebaseConfig = {
   storageBucket: "fleptortest.firebasestorage.app",
   messagingSenderId: "666464512954",
   appId: "1:666464512954:web:ca3545dc458992fa080b83"
-
 };
 
 // Initialize Firebase

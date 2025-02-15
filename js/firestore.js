@@ -1,8 +1,12 @@
 function submitData() {
+    console.log("submitData function called"); // Debugging
+
     // Get form values
     const name = document.getElementById('name').value;
     const job = document.getElementById('job').value;
     const email = document.getElementById('email').value;
+
+    console.log("Form values:", { name, job, email }); // Debugging
 
     // Validate input
     if (!name || !job || !email) {
@@ -18,6 +22,7 @@ function submitData() {
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
     })
     .then(() => {
+        console.log("Document successfully written!"); // Debugging
         alert('Data submitted successfully!');
         // Clear form fields
         document.getElementById('name').value = '';
@@ -25,7 +30,7 @@ function submitData() {
         document.getElementById('email').value = '';
     })
     .catch((error) => {
-        console.error('Error adding document: ', error);
+        console.error('Error adding document: ', error); // Debugging
         alert('An error occurred. Please try again.');
     });
 }
