@@ -1,8 +1,9 @@
 // auth.js
 import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from './firebase-config.js';
 
-document.getElementById('signup-form').addEventListener('submit', (e) => {
-    e.preventDefault();
+// Sign-up form submission
+document.getElementById('signup-form')?.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent default form submission
     const email = document.getElementById('signup-email').value;
     const password = document.getElementById('signup-password').value;
 
@@ -16,8 +17,9 @@ document.getElementById('signup-form').addEventListener('submit', (e) => {
         });
 });
 
-document.getElementById('signin-form').addEventListener('submit', (e) => {
-    e.preventDefault();
+// Sign-in form submission
+document.getElementById('signin-form')?.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent default form submission
     const email = document.getElementById('signin-email').value;
     const password = document.getElementById('signin-password').value;
 
