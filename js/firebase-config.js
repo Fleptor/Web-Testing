@@ -1,8 +1,9 @@
-// Import Firebase functions
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+// firebase-config.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 
-// Your Firebase configuration (replace with your actual config)
+// Your Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAdxi3GRmNxVa-ro4x5_Tl6DDgWoDCwRn4",
   authDomain: "fleptortest.firebaseapp.com",
@@ -15,6 +16,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
 
 // Export Firestore instance
-export { db };
+export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, db };
