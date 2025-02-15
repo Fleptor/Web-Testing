@@ -25,55 +25,7 @@
     <footer>This page is dedicated for Firebase/Firestore testing. - Fleptor</footer>
 
     <!-- Add Firebase and Firestore scripts -->
-    <script type="module">
-        // Import Firebase functions
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-
-        // Your Firebase configuration (replace with your actual config)
-        const firebaseConfig = {
-  apiKey: "AIzaSyAdxi3GRmNxVa-ro4x5_Tl6DDgWoDCwRn4",
-  authDomain: "fleptortest.firebaseapp.com",
-  projectId: "fleptortest",
-  storageBucket: "fleptortest.firebasestorage.app",
-  messagingSenderId: "666464512954",
-  appId: "1:666464512954:web:ca3545dc458992fa080b83"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        // Function to submit data to Firestore
-        window.submitData = async function () {
-            const name = document.getElementById('name').value;
-            const job = document.getElementById('job').value;
-            const email = document.getElementById('email').value;
-
-            // Validate input
-            if (!name || !job || !email) {
-                alert('Please fill out all fields.');
-                return;
-            }
-
-            try {
-                // Add a new document to the "users" collection
-                await addDoc(collection(db, 'users'), {
-                    name: name,
-                    job: job,
-                    email: email,
-                    timestamp: new Date()
-                });
-                alert('Data submitted successfully!');
-                // Clear form fields
-                document.getElementById('name').value = '';
-                document.getElementById('job').value = '';
-                document.getElementById('email').value = '';
-            } catch (error) {
-                console.error('Error adding document: ', error);
-                alert('An error occurred. Please try again.');
-            }
-        };
-    </script>
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/firestore.js"></script>
 </body>
 </html>
